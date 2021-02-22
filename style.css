@@ -13,14 +13,14 @@ body {
 
 @media only screen and (max-device-width: 480px) {
     body {
-        padding: 2rem;
+        padding: 0 2rem;
     }
 }
 
 footer {
     position: fixed;
     font-size: 15px;
-    bottom: 34px;
+    bottom: 1%;
 }
 
 .impressum-container {
@@ -40,14 +40,14 @@ footer {
 
 @media only screen and (max-device-width: 480px) {
     .profile-container {
-        padding: 2rem;
+        padding: 1rem 2rem 2rem;
     }
 }
 
 .image-container {
     position: relative;
     max-width: 400px;
-    margin: 0 auto 10px auto;
+    margin: 0 auto;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -64,8 +64,7 @@ footer {
 }
 
 .name {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 1vh 0;
     padding: 0;
     font-size: 2.2rem;
 }
@@ -89,22 +88,22 @@ footer {
 }
 
 hr {
-    margin: 4px 0 12px 0;
+    margin: 1vh 0;
 }
 
 @media only screen and (max-device-width: 480px) {
     hr {
-        margin: 24px 0;
+        margin: 2vh 0;
     }
 }
 
 .information-element img {
     width: 1.8rem;
-    padding: 0 5px 0 0;
+    margin: 0 4px 0 0;
+    padding: 0 2px 4px;
 }
 
 .information-element {
-    
     font-size: 1.4rem;
     padding: 0 0 0.5rem 0;
 }
