@@ -19,32 +19,72 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="profile-container">
-        <div class="header">
-            <div class="image-container">
-                <img src="img/me.jpg" alt="Patrick Stecker" id="profile-pic">
+    <section class="section">
+        <div class="profile-container">
+            <div class="header">
+                <div class="image-container">
+                    <img src="img/me.jpg" alt="Patrick Stecker" id="profile-pic">
+                </div>
+
+                <h1 class="name">Patrick Stecker</h1>
+                <div class="information-box">
+                    <div class="information-element"><img src="img/job.svg" alt="Job Icon">Dualer Student, Angewandte Informatik</div>
+                    <div class="information-element"><img src="img/location-pin.svg" alt="Location Icon"><a href="https://www.google.com/maps/place/Mannheim/">Mannheim, Deutschland</a></div>
+                </div>
+
             </div>
-
-
-            <h1 class="name">Patrick Stecker</h1>
-            <div class="information-box">
-                <div class="information-element"><img src="img/job.svg" alt="Job Icon">Dualer Student, Angewandte Informatik</div>
-                <div class="information-element"><img src="img/location-pin.svg" alt="Location Icon"><a href="https://www.google.com/maps/place/Mannheim/">Mannheim, Deutschland</a></div>
+            <hr>
+            <div class="social-media-row">
+                <a href="https://www.linkedin.com/in/patrick-stecker-7078191bb/"><img src="img/linkedin.svg" alt="Linkedin Profile"></a>
+                <a href="https://www.xing.com/profile/Patrick_Stecker3/cv"><img src="img/xing.svg" alt="Xing Profile"></a>
+                <a href="https://github.com/patrickstecker"><img src="img/github.svg" alt="GitHub profile"></a>
+                <a href="https://www.instagram.com/patrick.stkr/"><img src="img/instagram.svg" alt="Instagram profile"></a>
             </div>
-
         </div>
-        <hr>
-        <div class="social-media-row">
-            <a href="https://www.linkedin.com/in/patrick-stecker-7078191bb/"><img src="img/linkedin.svg" alt="Linkedin Profile"></a>
-            <a href="https://www.xing.com/profile/Patrick_Stecker3/cv"><img src="img/xing.svg" alt="Xing Profile"></a>
-            <a href="https://github.com/patrickstecker"><img src="img/github.svg" alt="GitHub profile"></a>
-            <a href="https://www.instagram.com/patrick.stkr/"><img src="img/instagram.svg" alt="Instagram profile"></a>
-        </div>
-    </div>
+        <a class="projects-link" href="#projects-section">Projekte</a>
+    </section>
 
-    <footer>
-        <a href="impressum.html">Impressum</a>
-    </footer>
+    <section id="projects-section" class="section projects">
+        <div class="projects-content">
+            <div class="project">
+                <img class="projects-icon" src="img/happyhamster.webp" alt="Happy Hamster icon">
+                <h3>Happy Hamster</h3>
+                <p>Im März 2020 habe ich mit ein paar Kommolitonen an dem <a href="https://wirvsvirus.org/" target="_blank">#WirVsVirus</a> Hackathon der Bundesregierung teilgenommen. Im Zuge dessen haben wir das Projekt HappyHamster gegründet. <br><br>
+                    Innerhalb eines Wochenendes haben wir gemeinsam einen Prototyp für eine Plattform entwickelt, die den Nutzern die Auslastung der Supermärkte in ihrer Nähe anzeigt. Zu dieser Zeit war die Corona-Pandemie noch am Anfang und es gab bei jedem Supermarkt eine Einlasskontrolle.
+                    Die Idee hinter dem Projekt war es, dass der Nutzer mit Hilfe von HappyHamster sich einen Supermarkt mit einer geringen Auslastung aussuchen kann, um das Risiko einer Coronavirus-Infektion möglichst gering zu halten.<br><br>
+                    In dem erschienenen Artikel auf <a href="https://www.stern.de/wirtschaft/news/coronavirus-gefahr---happy-hamster--warnt-vor-vollen-supermaerkten-9207340.html">stern.de</a> sind weitere Informationen vorhanden.
+                </p>
+                <a href="https://github.com/Happy-Hamster" target="_blank"><img class="projects-icon" src="img/github.svg"></a>
+            </div>
+            <hr>
+            <div class="project no-mobile">
+                <img class="projects-icon" src="img/clubwork.webp" alt="clubwork icon">
+                <h3>Clubwork</h3>
+                <p>Aktuell arbeite ich an einem Projekt namens Clubwork, eine Web-basierte Verwaltungssoftware für Vereine. <br><br>
+                    Die Idee ist spontan durch eine Anfrage eines Segelvereins gekommen, die eine passende Software gesucht haben aber keine gefunden haben. Zusammen mit dem restlichen Team probieren wir im Rahmen des Projekts neue interessante Verfahren im Bereich der Web-Anwendungen aus, wie zum Beispiel <a href="https://graphql.org/">GraphQL</a>.<br><br>
+                    Das Ziel des Projekts ist es nicht nur eine Verwaltungssoftware für den Segelverein zu werden, sondern eine Plattform für eine Vielzahl an verschiedenen Vereinen, die sich die Software für ihre Zwecke anpassen können.
+                </p>
+                <a href="https://github.com/clubwork" target="_blank"><img class="projects-icon" src="img/github.svg"></a>
+            </div>
+        </div>
+        <div class="footer no-mobile">
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </section>
+    <section class="section projects mobile">
+        <div class="project">
+            <img class="projects-icon" src="img/clubwork.webp" alt="clubwork icon">
+            <h3>Clubwork</h3>
+            <p>Aktuell arbeite ich an einem Projekt namens Clubwork, eine Web-basierte Verwaltungssoftware für Vereine. <br><br>
+                Die Idee ist spontan durch eine Anfrage eines Segelvereins gekommen, die eine passende Software gesucht haben aber keine gefunden haben. Zusammen mit dem restlichen Team probieren wir im Rahmen des Projekts neue interessante Verfahren im Bereich der Web-Anwendungen aus, wie zum Beispiel <a href="https://graphql.org/">GraphQL</a>.<br><br>
+                Das Ziel des Projekts ist es nicht nur eine Verwaltungssoftware für den Segelverein zu werden, sondern eine Plattform für eine Vielzahl an verschiedenen Vereinen, die sich die Software für ihre Zwecke anpassen können.
+            </p>
+            <a href="https://github.com/clubwork" target="_blank"><img class="projects-icon" src="img/github.svg"></a>
+        </div>
+        <div class="footer">
+            <a href="impressum.html">Impressum</a>
+        </div>
+    </section>
 </body>
 
 </html>
