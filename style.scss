@@ -5,13 +5,13 @@ $background: #1f1f1f;
   display: none !important;
 }
 
-@media only screen and (max-device-width: $mobile-width) {
+@media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
   .mobile {
     display: flex !important;
   }
 }
 
-@media only screen and (max-device-width: $mobile-width) {
+@media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
   .no-mobile {
     display: none !important;
   }
@@ -56,8 +56,10 @@ html {
       scroll-snap-align: start;
       height: 100vh;
       width: 100%;
+      max-height: 100%;
+      overflow: hidden;
 
-      @media only screen and (max-device-width: $mobile-width) {
+      @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
         padding: 0 2rem;
       }
 
@@ -69,8 +71,9 @@ html {
         padding: 10% 1rem 0;
         height: 100%;
 
-        @media only screen and (max-device-width: $mobile-width) {
-          padding: 20% 2rem 2rem;
+        @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
+          margin: auto 0;
+          height: fit-content;
         }
 
         .image-container {
@@ -78,7 +81,7 @@ html {
           max-width: 400px;
           margin: 0 auto;
 
-          @media only screen and (max-device-width: $mobile-width) {
+          @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
             width: 80%;
           }
 
@@ -118,7 +121,7 @@ html {
         hr {
           margin: 1vh 0;
 
-          @media only screen and (max-device-width: $mobile-width) {
+          @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
             margin: 2vh 0;
           }
         }
@@ -159,7 +162,7 @@ html {
       flex-direction: column;
       justify-content: space-between;
 
-      @media only screen and (max-device-width: $mobile-width) {
+      @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
         padding: 0;
       }
 
@@ -167,13 +170,15 @@ html {
         display: flex;
         justify-content: space-around;
         width: 100%;
+        max-height: 100%;
+        overflow: scroll;
 
         hr {
           margin: 15% 0 5%;
           height: 70%;
           width: 1px;
 
-          @media only screen and (max-device-width: $mobile-width) {
+          @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
             display: none;
           }
         }
@@ -183,7 +188,7 @@ html {
           text-align: center;
           margin-top: 10%;
 
-          @media only screen and (max-device-width: $mobile-width) {
+          @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
             width: 100%;
             height: 100%;
             padding: 0 2rem;
