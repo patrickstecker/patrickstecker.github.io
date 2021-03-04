@@ -1,0 +1,209 @@
+$mobile-width: 700px;
+$background: #1f1f1f;
+
+.mobile {
+  display: none !important;
+}
+
+@media only screen and (max-device-width: $mobile-width) {
+  .mobile {
+    display: flex !important;
+  }
+}
+
+@media only screen and (max-device-width: $mobile-width) {
+  .no-mobile {
+    display: none !important;
+  }
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+
+  body {
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background: $background;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+    scroll-behavior: smooth;
+
+    a {
+      color: #cafffb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .impressum-container {
+      display: inline;
+      width: 60%;
+      min-width: 400px;
+      padding: 1rem;
+    }
+
+    .section {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      scroll-snap-align: start;
+      height: 100vh;
+      width: 100%;
+
+      @media only screen and (max-device-width: $mobile-width) {
+        padding: 0 2rem;
+      }
+
+      .profile-container {
+        text-align: center;
+        width: 60%;
+        max-width: 600px;
+        min-width: 400px;
+        padding: 10% 1rem 0;
+        height: 100%;
+
+        @media only screen and (max-device-width: $mobile-width) {
+          padding: 20% 2rem 2rem;
+        }
+
+        .image-container {
+          position: relative;
+          max-width: 400px;
+          margin: 0 auto;
+
+          @media only screen and (max-device-width: $mobile-width) {
+            width: 80%;
+          }
+
+          #profile-pic {
+            width: 100%;
+            height: 100%;
+            max-width: 400px;
+            border-radius: 50%;
+          }
+        }
+
+        .name {
+          margin: 1vh 0;
+          padding: 0;
+          font-size: 2.2rem;
+        }
+
+        .information-box {
+
+          .information-element {
+            font-size: 1.4rem;
+            padding: 0 0 0.5rem 0;
+
+            img {
+              width: 1.8rem;
+              margin: 0 4px 0 0;
+              padding: 0 2px 4px;
+            }
+
+            a {
+              color: white;
+              text-decoration: none;
+            }
+          }
+        }
+
+        hr {
+          margin: 1vh 0;
+
+          @media only screen and (max-device-width: $mobile-width) {
+            margin: 2vh 0;
+          }
+        }
+
+        .social-media-row {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+
+          img {
+            height: 4rem;
+            width: 4rem;
+            fill: white;
+          }
+
+          img:hover {
+            border: transparent 2px solid;
+          }
+        }
+      }
+
+      .projects-link {
+        margin-bottom: 5%;
+      }
+
+      .footer {
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1%;
+      }
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media only screen and (max-device-width: $mobile-width) {
+        padding: 0;
+      }
+
+      .projects-content {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        hr {
+          margin: 15% 0 5%;
+          height: 70%;
+          width: 1px;
+
+          @media only screen and (max-device-width: $mobile-width) {
+            display: none;
+          }
+        }
+
+        .project {
+          width: 40%;
+          text-align: center;
+          margin-top: 10%;
+
+          @media only screen and (max-device-width: $mobile-width) {
+            width: 100%;
+            height: 100%;
+            padding: 0 2rem;
+          }
+
+          .projects-icon {
+            width: 4rem;
+            height: 4rem;
+          }
+
+          h3 {
+            margin-top: 6px;
+          }
+
+          p {
+            margin: 10% 0;
+          }
+        }
+      }
+    }
+
+  }
+}
