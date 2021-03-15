@@ -22,7 +22,7 @@ html body {
   color: white;
   font-family: "Roboto", sans-serif;
   background: #1f1f1f;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   overflow: auto;
   scroll-behavior: smooth;
 }
@@ -46,11 +46,8 @@ html body .section {
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
   width: 100%;
-  max-height: 100%;
-  overflow: auto;
 }
 @media only screen and (max-device-width: 700px) and (orientation: portrait) {
   html body .section {
@@ -62,7 +59,7 @@ html body .section .profile-container {
   width: 60%;
   max-width: 600px;
   min-width: 400px;
-  padding: 10% 1rem 0;
+  padding: 4% 1rem 0;
   height: 100%;
 }
 @media only screen and (max-device-width: 700px) and (orientation: portrait) {
@@ -134,7 +131,7 @@ html body .section .profile-container .social-media-row img:hover {
   border: transparent 2px solid;
 }
 html body .section .projects-link {
-  margin-bottom: 5%;
+  margin: 2%;
 }
 @media only screen and (max-height: 800px) {
   html body .section .projects-link {
@@ -164,7 +161,7 @@ html body .projects .projects-content {
 }
 html body .projects .projects-content hr {
   margin: 15% 0 5%;
-  height: 70%;
+  height: 70vh;
   width: 1px;
 }
 @media only screen and (max-device-width: 700px) and (orientation: portrait) {
@@ -175,7 +172,7 @@ html body .projects .projects-content hr {
 html body .projects .projects-content .project {
   width: 40%;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 4%;
 }
 @media only screen and (max-device-width: 700px) and (orientation: portrait) {
   html body .projects .projects-content .project {
