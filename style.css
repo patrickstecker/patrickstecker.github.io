@@ -22,9 +22,14 @@ html body {
   color: white;
   font-family: "Roboto", sans-serif;
   background: #1f1f1f;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   overflow: auto;
   scroll-behavior: smooth;
+}
+@media only screen and (max-device-width: 700px) and (orientation: portrait) {
+  html body {
+    scroll-snap-type: none;
+  }
 }
 html body a {
   color: #cafffb;
@@ -147,7 +152,7 @@ html body .section .footer {
 html body .projects {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 @media only screen and (max-device-width: 700px) and (orientation: portrait) {
   html body .projects {
@@ -159,26 +164,18 @@ html body .projects .projects-content {
   justify-content: space-around;
   width: 100%;
 }
-html body .projects .projects-content hr {
-  margin: 15% 0 5%;
-  height: 70vh;
-  width: 1px;
-}
-@media only screen and (max-device-width: 700px) and (orientation: portrait) {
-  html body .projects .projects-content hr {
-    display: none;
-  }
-}
 html body .projects .projects-content .project {
-  width: 40%;
   text-align: center;
   margin-top: 4%;
+  height: fit-content;
+  width: 50%;
+  padding: 0 5%;
 }
 @media only screen and (max-device-width: 700px) and (orientation: portrait) {
   html body .projects .projects-content .project {
     width: 100%;
-    height: fit-content;
     padding: 0 2rem;
+    margin: 4% 0 0;
   }
 }
 html body .projects .projects-content .project .projects-icon {
@@ -197,6 +194,20 @@ html body .projects .projects-content .project p {
   html body .projects .projects-content .project p {
     font-size: 1em;
   }
+}
+html body .projects .projects-content .project.no-mobile {
+  position: relative;
+}
+html body .projects .projects-content .project.no-mobile::before {
+  content: " ";
+  width: 1px;
+  height: 80%;
+  background: white;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

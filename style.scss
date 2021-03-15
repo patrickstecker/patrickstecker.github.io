@@ -28,9 +28,13 @@ html {
     color: white;
     font-family: 'Roboto', sans-serif;
     background: $background;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     overflow: auto;
     scroll-behavior: smooth;
+
+    @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
+      scroll-snap-type: none;
+    }
 
     a {
       color: #cafffb;
@@ -167,7 +171,7 @@ html {
     .projects {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
 
       @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
         padding: 0;
@@ -178,25 +182,17 @@ html {
         justify-content: space-around;
         width: 100%;
 
-        hr {
-          margin: 15% 0 5%;
-          height: 70vh;
-          width: 1px;
-
-          @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
-            display: none;
-          }
-        }
-
         .project {
-          width: 40%;
           text-align: center;
           margin-top: 4%;
+          height: fit-content;
+          width: 50%;
+          padding: 0 5%;
 
           @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
             width: 100%;
-            height: fit-content;
             padding: 0 2rem;
+            margin: 4% 0 0;
           }
 
           .projects-icon {
@@ -216,6 +212,21 @@ html {
             @media only screen and (max-device-width: $mobile-width) and (orientation: portrait) {
               font-size: 1em;
             }
+          }
+        }
+
+        .project.no-mobile {
+          position: relative;
+          &::before {
+            content: ' ';
+            width: 1px;
+            height: 80%;
+            background: white;
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            top: 10%;
+            left: 0;
           }
         }
       }
